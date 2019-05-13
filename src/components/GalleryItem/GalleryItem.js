@@ -28,6 +28,8 @@ class GalleryItem extends Component {
                 <div className="cell" onClick={this.clickCell}>
                     {cellHtml}
                 </div>
+                <p>{this.props.likes} people love this image!</p>
+                <button>Like this image</button>
             </div>
         )
     }

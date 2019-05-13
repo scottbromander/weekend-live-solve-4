@@ -6,10 +6,13 @@ class GalleryList extends Component {
 
     render() {
         const htmlArray = this.props.galleryData.map((what, where) => {
+            console.log(what);
+            
             return (
                 <GalleryItem
                     path={what.path}
                     description={what.description}
+                    likes={what.likes}
                 />
             );
         });
