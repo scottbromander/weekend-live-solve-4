@@ -7,15 +7,10 @@ class GalleryList extends Component {
     render() {
         const htmlArray = this.props.galleryData.map((what, where) => {
             return (
-                <div>
-                    <div className="cell">
-                        <img src={what.path} />
-                    </div>
-
-                    <p>{what.description}</p>
-
-                    <GalleryItem />
-                </div>
+                <GalleryItem
+                    path={what.path}
+                    description={what.description}
+                />
             );
         });
 

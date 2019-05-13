@@ -4,7 +4,13 @@ class GalleryItem extends Component {
 
     render() {
         return (
-            <div></div>
+            <div>
+                <div className="cell">
+                    <img src={this.props.path} />
+                </div>
+
+                <p>{this.props.description}</p>
+            </div>
         )
     }
 }
