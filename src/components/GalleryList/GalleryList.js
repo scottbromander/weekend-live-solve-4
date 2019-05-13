@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './GalleryList.css';
 import GalleryItem from '../GalleryItem/GalleryItem';
 
 class GalleryList extends Component {
@@ -7,12 +6,15 @@ class GalleryList extends Component {
     render() {
         const htmlArray = this.props.galleryData.map((what, where) => {
             console.log(what);
-            
+
             return (
                 <GalleryItem
+                    key={where}
+                    id={what.id}
                     path={what.path}
                     description={what.description}
                     likes={what.likes}
+                    clickLike={this.props.clickLike}
                 />
             );
         });

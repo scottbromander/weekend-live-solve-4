@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import './GalleryItem.css';
+
 
 class GalleryItem extends Component {
 
@@ -24,12 +26,12 @@ class GalleryItem extends Component {
         }
 
         return (
-            <div>
+            <div className="item">
                 <div className="cell" onClick={this.clickCell}>
                     {cellHtml}
                 </div>
                 <p>{this.props.likes} people love this image!</p>
-                <button>Like this image</button>
+                <button data-id={this.props.id} onClick={this.props.clickLike}>Like this image</button>
             </div>
         )
     }
