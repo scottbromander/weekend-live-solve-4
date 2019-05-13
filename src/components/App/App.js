@@ -4,10 +4,21 @@ import axios from 'axios';
 
 class App extends Component {
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      galleryData: []
+    }
+  }
+
   componentDidMount() {
     axios.get('/gallery')
         .then((response) => {
-          console.log(response.data);
+          this.setState({
+            galleryData : response.data
+          });
+          console.log(this.state);
         })
         .catch((err) => {
           console.log(err);
