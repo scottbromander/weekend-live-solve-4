@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import './GalleryList.css';
+import GalleryItem from '../GalleryItem/GalleryItem';
 
 class GalleryList extends Component {
 
     render() {
-        console.log('Props inside Gallery List: ', this.props);
-
         const htmlArray = this.props.galleryData.map((what, where) => {
             return (
                 <div>
@@ -14,11 +13,11 @@ class GalleryList extends Component {
                     </div>
 
                     <p>{what.description}</p>
+
+                    <GalleryItem />
                 </div>
             );
         });
-
-        console.log(htmlArray);
 
         return(
             <div>
